@@ -1,0 +1,43 @@
+{
+    "navbar.links.home": "home",
+    "navbar.links.about": "sobre mi",
+    "navbar.links.works": "proyectos",
+    "navbar.links.skills": "habilidades",
+    "navbar.links.contact": "contáctame",
+
+    "navbar.badge.text": "Hola, Soy",
+    "navbar.badge.head-text": "pedro",
+
+    "header.badge.tag.text1": "FREELANCER",
+    "header.badge.tag.text2": "FULL-STACK",
+    "header.badge.tag.text3": "WEB DEVELOPER",
+    
+    "about.h2.text1": "Sé que las  ",
+    "about.h2.span.text1": "Buenas Prácticas",
+    "about.h2.text2": "Significan  ",
+    "about.h2.span.text2": "Buenos Productos",
+
+    "works.h2.text1": "Mis ",
+    "works.h2.text2": "Proyectos",
+    "works.tag.webapp": "Aplicaciones Web",
+    "works.tag.mobileapp": "Aplicaciones Móviles",
+    "works.tag.wordpress": "Wordpress",
+    "works.tag.desktop": "aplicaciones de escritorio",
+    "works.tag.api": "API",
+    "works.tag.others": "Otros",
+    "works.tag.all": "Todos",
+    
+    "skills.h2.text": "Habilidades & Experiencias",
+
+    "footer.h2.text": "Tómate un café y Habla conmigo",
+    "footer.placeholder.name": "nombre",
+    "footer.placeholder.email": "Tu correo electrónico",
+    "footer.placeholder.message": "Tu mensaje",
+    "footer.submit": "Enviar Mensaje",
+    "footer.loading": "Cargando...",
+    "footer.thanks": "¡Gracias por ponerte en contacto! pronto me pondré en contacto contigo.",
+
+    "appwrap.text1": "@2022 kantar0.dev | hospedado en ",
+    "appwrap.link": "HostingSSI",
+    "appwrap.text2": " | Todos los derechos reservados"
+}

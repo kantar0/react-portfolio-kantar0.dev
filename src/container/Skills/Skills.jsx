@@ -1,31 +1,46 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import { motion } from 'framer-motion';
 import ReactTooltip from 'react-tooltip';
-
+import { FormattedMessage } from 'react-intl';
+import { langContext } from '../../contexts/LangContext';
 import { AppWrap, MotionWrap } from '../../wrapper';
 import { urlFor, client } from '../../client';
 import './Skills.scss';
 
 const Skills = () => {
+  const language = useContext(langContext);
   const [experiences, setExperiences] = useState([]);
   const [skills, setSkills] = useState([]);
-
   useEffect(() => {
-    const query = '*[_type == "experiences"]';
-    const skillsQuery = '*[_type == "skills"]';
-
-    client.fetch(query).then((data) => {
-      setExperiences(data);
-    });
-
-    client.fetch(skillsQuery).then((data) => {
-      setSkills(data);
-    });
-  }, []);
+    if (language.buttonChecked === 'unchecked') {
+      const query = '*[_type == "experiences"] | order(year desc)';
+      const skillsQuery = '*[_type == "skills"]';
+      client.fetch(query).then((data) => {
+        setExperiences(data);
+      });
+      client.fetch(skillsQuery).then((data) => {
+        setSkills(data);
+      });
+    } else if (language.buttonChecked === 'checked') {
+      const query = '*[_type == "experiences_es"] | order(year desc)';
+      const skillsQuery = '*[_type == "skills"]';
+      client.fetch(query).then((data) => {
+        setExperiences(data);
+      });
+      client.fetch(skillsQuery).then((data) => {
+        setSkills(data);
+      });
+    }
+  }, [language.buttonChecked]);
 
   return (
     <>
-      <h2 className="head-text">Skills & Experiences</h2>
+      <h2 className="head-text">
+        <FormattedMessage
+          id="skills.h2.text"
+          defaultMessage="undefined"
+        />
+      </h2>
 
       <div className="app__skills-container">
         <motion.div className="app__skills-list">
@@ -50,10 +65,10 @@ const Skills = () => {
           {experiences.map((experience) => (
             <motion.div
               className="app__skills-exp-item"
-              key={experience.year}
+              key={`${experience.year}`}
             >
               <div className="app__skills-exp-year">
-                <p className="bold-text">{experience.year}</p>
+                <p key={experience.year} className="bold-text">{experience.year}</p>
               </div>
               <motion.div className="app__skills-exp-works">
                 {experience.works.map((work) => (

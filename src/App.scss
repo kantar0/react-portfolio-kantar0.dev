@@ -55,7 +55,7 @@
   font-size: 2.75rem;
   font-weight: 800;
   text-align: center;
-  color: var(--black-color);
+  color: var(--fourth-color);
   text-transform: capitalize;
 
   span {
@@ -74,7 +74,7 @@
 .p-text {
   font-size: 1rem;
   text-align: left;
-  color: var(--gray-color);
+  color: var(--fourth-color);
   line-height: 1.5;
 
   @media screen and (min-width: 2000px) {
@@ -109,9 +109,9 @@
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    background-color: var(--white-color);
+    background-color: var(--fifth-color);
     margin: 0.25rem 0;
-    border: 1px solid var(--lightGray-color);
+    border: 1px solid var(--fourth-color);
 
     display: flex;
     justify-content: center;
@@ -122,7 +122,7 @@
     svg {
       width: 15px;
       height: 15px;
-      color: var(--gray-color);
+      color: var(--primary-color);
     }
 
     &:hover {
@@ -153,14 +153,13 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-
   padding: 1rem;
 
   .app__navigation-dot {
     width: 10px;
     height: 10px;
     border-radius: 50%;
-    background-color: #cbcbcb;
+    background-color: var(--fourth-color);
     margin: 0.5rem;
 
     transition: background-color 0.2s ease-in-out;
@@ -185,4 +184,13 @@
   .copyright {
     padding: 2rem;
   }
+}
+
+.uncapitalize{
+  text-transform: none!important;
+}
+
+.head-text-redux{
+  margin-top: 2rem;
+  font-size: 1.5em!important;
 }

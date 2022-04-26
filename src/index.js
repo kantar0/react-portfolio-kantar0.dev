@@ -1,12 +1,11 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-
+import * as React from 'react-dom/client';
+import { LangProvider } from './contexts/LangContext';
 import App from './App';
 import './index.css';
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root'),
-);
+const container = document.getElementById('root');
+
+// Create a root.
+const root = React.createRoot(container);
+// Initial render: Render an element to the root.
+root.render(<LangProvider><App /></LangProvider>);

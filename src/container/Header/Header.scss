@@ -1,10 +1,11 @@
 #home {
   position: relative;
-  background: url("../../assets/bgIMG.png");
   background-size: cover;
   background-position: center;
   background-repeat: repeat;
-
+  .app__navigation{
+    background: var(--primary-color);
+  }
   // disable the default padding styles
   .app__wrapper {
     padding: 0;
@@ -63,12 +64,12 @@
   .badge-cmp,
   .tag-cmp {
     padding: 1rem 2rem;
-    background: var(--white-color);
+    background: var(--third-color);
     border-radius: 15px;
     flex-direction: row;
     width: auto;
 
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 0px 20px var(--white-shadow);
   }
 
   .tag-cmp {
@@ -110,8 +111,8 @@
     height: 100px;
     border-radius: 50%;
 
-    background: var(--white-color);
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    background: var(--third-color);
+    box-shadow: 0px 0px 20px var(--white-shadow);
 
     img {
       width: 60%;

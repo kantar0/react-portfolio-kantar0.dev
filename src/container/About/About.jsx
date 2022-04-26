@@ -1,24 +1,55 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import { motion } from 'framer-motion';
-
+import { FormattedMessage } from 'react-intl';
 import { AppWrap, MotionWrap } from '../../wrapper';
 import './About.scss';
 import { urlFor, client } from '../../client';
+import { langContext } from '../../contexts/LangContext';
 
 const About = () => {
+  const language = useContext(langContext);
   const [abouts, setAbouts] = useState([]);
-
   useEffect(() => {
-    const query = '*[_type == "abouts"]';
+    if (language.buttonChecked === 'unchecked') {
+      const query = '*[_type == "abouts"]';
 
-    client.fetch(query).then((data) => {
-      setAbouts(data);
-    });
-  }, []);
+      client.fetch(query).then((data) => {
+        setAbouts(data);
+      });
+    } else if (language.buttonChecked === 'checked') {
+      const query = '*[_type == "abouts_es"]';
+
+      client.fetch(query).then((data) => {
+        setAbouts(data);
+      });
+    }
+  }, [language.buttonChecked]);
 
   return (
     <>
-      <h2 className="head-text">I Know that <span>Good Practices</span> <br />means  <span>Good Products</span></h2>
+      <h2 className="head-text uncapitalize">
+        <FormattedMessage
+          id="about.h2.text1"
+          defaultMessage="undefined"
+        />
+        <span>
+          <FormattedMessage
+            id="about.h2.span.text1"
+            defaultMessage="undefined"
+          />
+        </span>
+        <br />
+        <FormattedMessage
+          id="about.h2.text2"
+          defaultMessage="undefined"
+        />
+        <span>
+          <FormattedMessage
+            id="about.h2.span.text2"
+            defaultMessage="undefined"
+          />
+        </span>
+      </h2>
 
       <div className="app__profiles">
         {abouts.map((about, index) => (

@@ -1,12 +1,13 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import { HiChevronLeft, HiChevronRight } from 'react-icons/hi';
 import { motion } from 'framer-motion';
-
+import { langContext } from '../../contexts/LangContext';
 import { AppWrap, MotionWrap } from '../../wrapper';
 import { urlFor, client } from '../../client';
 import './Testimonial.scss';
 
 const Testimonial = () => {
+  const language = useContext(langContext);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [testimonials, setTestimonials] = useState([]);
   const [brands, setBrands] = useState([]);
@@ -16,17 +17,30 @@ const Testimonial = () => {
   };
 
   useEffect(() => {
-    const query = '*[_type == "testimonials"]';
-    const brandsQuery = '*[_type == "brands"]';
+    if (language.buttonChecked === 'unchecked') {
+      const query = '*[_type == "testimonials"]';
+      const brandsQuery = '*[_type == "brands"]';
 
-    client.fetch(query).then((data) => {
-      setTestimonials(data);
-    });
+      client.fetch(query).then((data) => {
+        setTestimonials(data);
+      });
 
-    client.fetch(brandsQuery).then((data) => {
-      setBrands(data);
-    });
-  }, []);
+      client.fetch(brandsQuery).then((data) => {
+        setBrands(data);
+      });
+    } else if (language.buttonChecked === 'checked') {
+      const query = '*[_type == "testimonials_es"]';
+      const brandsQuery = '*[_type == "brands"]';
+
+      client.fetch(query).then((data) => {
+        setTestimonials(data);
+      });
+
+      client.fetch(brandsQuery).then((data) => {
+        setBrands(data);
+      });
+    }
+  }, [language.buttonChecked]);
 
   return (
     <>

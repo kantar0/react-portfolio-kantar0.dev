@@ -1,3 +1,21 @@
+#skills {
+  .app__navigation{
+    background: var(--primary-color);
+  }
+  .app__social{
+    background: var(--primary-color);
+  }
+  .copyright .p-text {
+    color: var(--fifth-color);
+  }
+}
+#skills .app__flex{
+  background-color: var(--primary-color);
+  span {
+    color: var(--fifth-color);
+  }
+}
+
 .app__skills {
   flex: 1;
   width: 100%;
@@ -45,7 +63,7 @@
     width: 90px;
     height: 90px;
     border-radius: 50%;
-    background-color: #fef4f5;
+    background-color: var(--white-shadow);
 
     img {
       width: 50%;
@@ -53,7 +71,7 @@
     }
 
     &:hover {
-      box-shadow: 0 0 25px #fef4f5;
+      box-shadow: 0 0 25px var(--white-shadow);
     }
 
     @media screen and (min-width: 2000px) {
@@ -115,11 +133,12 @@
 
     h4 {
       font-weight: 500;
+      color: var(--fifth-color);
     }
 
     p {
       font-weight: 400;
-      color: var(--gray-color);
+      color: var(--fifth-color);
       margin-top: 5px;
     }
   }
@@ -130,7 +149,7 @@
 
   p {
     font-weight: 800;
-    color: var(--secondary-color);
+    color: var(--fifth-color);
   }
 
   @media screen and (max-width: 450px) {
@@ -140,11 +159,11 @@
 
 .skills-tooltip {
   max-width: 300px !important;
-  background-color: var(--white-color) !important;
-  box-shadow: 0 0 25px rgba(0, 0, 0, 0.1) !important;
+  background-color: var(--third-color) !important;
+  box-shadow: 0 0 25px var(header-tag-shadow) !important;
   border-radius: 5px !important;
   padding: 1rem !important;
-  color: var(--gray-color) !important;
+  color: var(--fifth-color) !important;
   text-align: center !important;
   line-height: 1.5 !important;
   opacity: 1 !important;

@@ -3,13 +3,21 @@
 :root {
   --font-base: "DM Sans", sans-serif;
 
-  --primary-color: #edf2f8;
-  --secondary-color: #313bac;
-  --black-color: #030303;
-  --lightGray-color: #e4e4e4;
-  --gray-color: #6b7688;
-  --brown-color: #46364a;
+  --primary-color: #202124;
+  --secondary-color: #292A2D;
+  --third-color: #35363A;
+  --fourth-color: #F1F3F4;
+  --fifth-color: #F9F9F9;
+  --sixth-color: #b5b5b5;
+
   --white-color: #ffffff;
+
+  --black-shadow: rgba(0, 0, 0, 0.1);
+  --white-shadow: rgba(255, 255, 255, 0.1);
+  --work-img-hover:rgba(0, 0, 0, 0.5);
+  --menu-mobile-bg-color: rgba(255, 255, 255, 0.925);
+  --navbar-bg-color: rgba(255, 255, 255, 0.25);
+  --navbar-bg-color-mobile: rgba(0, 0, 0, 0.45);
 }
 
 * {

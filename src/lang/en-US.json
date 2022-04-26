@@ -1,0 +1,45 @@
+{
+    "navbar.links.home": "Home",
+    "navbar.links.about": "about",
+    "navbar.links.works": "Works",
+    "navbar.links.skills": "skills",
+    "navbar.links.contact": "contact",
+
+    "navbar.badge.text": "Hello, I am",
+    "navbar.badge.head-text": "pedro",
+
+    "header.badge.tag.text1": "FREELANCER",
+    "header.badge.tag.text2": "FULL-STACK",
+    "header.badge.tag.text3": "WEB DEVELOPER",
+
+    "about.h2.text1": "I Know That ",
+    "about.h2.span.text1": "Good Practices",
+    "about.h2.text2": "Means ",
+    "about.h2.span.text2": "Good Products",
+
+    "works.h2.text1": "My ",
+    "works.h2.text2": "Portfolio",
+    "works.tag.webapp": "Web App",
+    "works.tag.mobileapp": "Mobile App",
+    "works.tag.wordpress": "Wordpress",
+    "works.tag.desktop": "Desktop",
+    "works.tag.api": "API",
+    "works.tag.others": "Others",
+    "works.tag.all": "All",
+
+    "skills.h2.text": "Skills & Experiences",
+
+    "footer.h2.text": "Take a coffee & Chat with me",
+    "footer.placeholder.name": "name",
+    "footer.placeholder.email": "Your email",
+    "footer.placeholder.message": "Your message",
+    "footer.submit": "Send Message",
+    "footer.loading": "Loading...",
+    "footer.thanks": "Thank you for getting in touch!, I will contact you soon",
+
+    "appwrap.text1": "@2022 kantar0.dev | Host by ",
+    "appwrap.link": "HostingSSI",
+    "appwrap.text2": " | All rights reserved"
+
+
+}

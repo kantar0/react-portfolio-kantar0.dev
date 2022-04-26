@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-
+import { FormattedMessage } from 'react-intl';
 import { AppWrap } from '../../wrapper';
 import { images } from '../../constants';
 import './Header.scss';
@@ -27,8 +27,18 @@ const Header = () => (
         <div className="badge-cmp app__flex">
           <span>👋</span>
           <div style={{ marginLeft: 20 }}>
-            <p className="p-text">Hello, I am</p>
-            <h1 className="head-text">Pedro</h1>
+            <p className="p-text">
+              <FormattedMessage
+                id="navbar.badge.text"
+                defaultMessage="Hello, I am"
+              />
+            </p>
+            <h1 className="head-text">
+              <FormattedMessage
+                id="navbar.badge.head-text"
+                defaultMessage="Pedro"
+              />
+            </h1>
           </div>
         </div>
         <div className="tag-cmp app__flex">
@@ -43,15 +53,7 @@ const Header = () => (
       whileInView={{ opacity: [0, 1] }}
       transition={{ duration: 0.5, delayChildren: 0.5 }}
       className="app__header-img"
-    >
-      <motion.img
-        whileInView={{ scale: [0, 1] }}
-        transition={{ duration: 1, ease: 'easeInOut' }}
-        src={images.circle}
-        alt="profile_circle"
-        className="overlay_circle"
-      />
-    </motion.div>
+    />
 
     <motion.div
       variants={scaleVariants}

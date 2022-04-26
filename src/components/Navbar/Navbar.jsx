@@ -1,10 +1,14 @@
-import { React, useState } from 'react';
+/* eslint-disable jsx-a11y/label-has-associated-control */
+import { React, useState, useContext } from 'react';
+import { FormattedMessage } from 'react-intl';
 /* import { HiMenuAlt4 } from 'react-icons/hi'; */
 import { motion } from 'framer-motion';
 import { images } from '../../constants';
+import { langContext } from '../../contexts/LangContext';
 import './Navbar.scss';
 
 const Navbar = () => {
+  const language = useContext(langContext);
   const path01Variants = {
     open: { d: 'M3.06061 2.99999L21.0606 21' },
     closed: { d: 'M0 9.5L24 9.5' },
@@ -26,50 +30,74 @@ const Navbar = () => {
       setAnimation(animation === 'closed' ? 'open' : 'closed');
     }, 200);
   };
+  const langOnnChange = () => {
+    language.setlanguage(language.locale === 'en-US' ? 'es-ES' : 'en-US');
+  };
   return (
     <nav className={`app__navbar ${animation === 'closed' ? '' : 'ActiveHamburger'}`}>
-      <div className="app__navbar-logo">
-        <img src={images.logo} alt="logo" />
+      <div className="app__navbar-container">
+        <div className="app__navbar-logo">
+          <img src={images.logo} alt="logo" />
+        </div>
+        <ul className="app__navbar-links">
+          {['home', 'about', 'works', 'skills', 'contact'].map((item) => (
+            <li className="app__flex p-text" key={`link-${item}`}>
+              <div />
+              <a href={`#${item}`}>
+                <FormattedMessage
+                  id={`navbar.links.${item}`}
+                  defaultMessage={`${item}`}
+                />
+              </a>
+            </li>
+          ))}
+        </ul>
+        <div className="switch">
+          <input
+            onChange={() => langOnnChange()}
+            id="language-toggle"
+            className="check-toggle check-toggle-round-flat"
+            checked={language.locale === 'es-ES'}
+            type="checkbox"
+          />
+          <label htmlFor="language-toggle" />
+          <span className="on">EN</span>
+          <span className="off">ES</span>
+        </div>
+        <div className="app__navbar-menu">
+          <svg onClick={onClick} width="24" height="24" viewBox="0 0 24 24">
+            <motion.path
+              stroke="#FFFFFF"
+              animate={animation}
+              variants={path01Variants}
+            />
+            <motion.path
+              stroke="#FFFFFF"
+              animate={animation}
+              variants={path02Variants}
+            />
+          </svg>
+        </div>
       </div>
-      <ul className="app__navbar-links">
-        {['home', 'about', 'work', 'skills', 'contact'].map((item) => (
-          <li className="app__flex p-text" key={`link-${item}`}>
-            <div />
-            <a href={`#${item}`}>{item}</a>
-          </li>
-        ))}
-      </ul>
-
-      <div className="app__navbar-menu">
-        <svg onClick={onClick} width="24" height="24" viewBox="0 0 24 24">
-          <motion.path
-            stroke="#FFFFFF"
-            animate={animation}
-            variants={path01Variants}
-          />
-          <motion.path
-            stroke="#FFFFFF"
-            animate={animation}
-            variants={path02Variants}
-          />
-        </svg>
-
+      <div className="navbar-mobile-menu">
         <motion.div
           animate={animation === 'closed' ? 'closed' : 'open'}
           variants={divVariant}
           className={`${animation === 'closed' ? 'hideList' : ''}`}
         >
           <ul>
-            {['home', 'about', 'work', 'skills', 'contact'].map((item) => (
-              <li key={item}>
+            {['home', 'about', 'works', 'skills', 'contact'].map((item) => (
+              <li key={item} className="p-text">
                 <a href={`#${item}`}>
-                  {item}
+                  <FormattedMessage
+                    id={`navbar.links.${item}`}
+                    defaultMessage={`${item}`}
+                  />
                 </a>
               </li>
             ))}
           </ul>
         </motion.div>
-
       </div>
     </nav>
   );
