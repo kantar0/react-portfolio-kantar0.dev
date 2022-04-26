@@ -1,10 +1,33 @@
-# Micael - The Ultimate Web Development Portfolio 
-![Micael](https://i.ibb.co/fHPM38q/image.png)
+# My web Portfolio
+<p align="center">
+  <img src="https://kantar0.dev/media/kantar0dev.png">
+</p>
+_A beautiful, simple, elegant, modern portfolio developed with React, Framer Motion, SASS and Sanity, also applying the BEM methodology. It is the Front-End side of kantar0.dev, which is integrated with Sanity_
 
-## Introduction
-This is a code repository for the corresponding video tutorial.
+---
 
-Do you know the best way to show your skills to employers or potential clients? Stand out from the crowd by presenting a well-digitalized flexible portfolio and get your dream job.
+### Pre requirements 📋
 
-## Stay up to date with new projects
-New major projects coming soon, subscribe to the mailing list to stay up to date https://jsmasterypro.com/newsletter
+_Cualquier servidor web que soporte de soporte React y tener una cuenta en sanity y definir los esquemas del mismo.
+
+### Instalación 🔧
+
+1. Download or clone the project.
+2. use /npm start to run the project
+
+## built with 🛠️
+
+* [React](https://reactjs.org/) - React JS
+* [framer Motion](https://www.framer.com/motion/) - Framer
+* [Sass](https://sass-lang.com/) - Sass
+* [Sanity](https://www.sanity.io/) - Sanity
+* [FormatJS](https://formatjs.io/) - FormatJS
+* [BEM](http://getbem.com/) - BEM
+
+
+## Autor ✒️
+
+* **Pedro Rojas** - *developer* - [kantar0](https://github.com/kantar0)
+
+---
+⌨️ With ❤️ by [kantar0](https://github.com/kantar0)  - [kantar0.dev](https://kantar0.dev)😊
