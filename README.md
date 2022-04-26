@@ -8,9 +8,9 @@ _A beautiful, simple, elegant, modern portfolio developed with React, Framer Mot
 
 ### Pre requirements 📋
 
-_Cualquier servidor web que soporte de soporte React y tener una cuenta en sanity y definir los esquemas del mismo.
+_Any web server that supports React support and have an account in sanity and define the schemas of it.
 
-### Instalación 🔧
+### installation 🔧
 
 1. Download or clone the project.
 2. use /npm start to run the project
@@ -25,7 +25,7 @@ _Cualquier servidor web que soporte de soporte React y tener una cuenta en sanit
 * [BEM](http://getbem.com/) - BEM
 
 
-## Autor ✒️
+## Author ✒️
 
 * **Pedro Rojas** - *developer* - [kantar0](https://github.com/kantar0)
 
