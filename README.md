@@ -1,12 +1,6 @@
 # My web Portfolio
 <p align="center">
-  <img src="https://i.ibb.co/NsNDV6m/1.png">
-</p>
-<p align="center">
-  <img src="https://i.ibb.co/f99nMhr/2.png">
-</p>
-<p align="center">
-  <img src="https://i.ibb.co/nk4qvBv/3.png">
+  <img src="https://kantar0.dev/media/kantar0dev.png">
 </p>
 _A beautiful, simple, elegant, modern portfolio developed with React, Framer Motion, SASS and Sanity, also applying the BEM methodology. It is the Front-End side of kantar0.dev, which is integrated with Sanity_
 
